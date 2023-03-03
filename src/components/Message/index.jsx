@@ -1,7 +1,10 @@
-import React from 'react'
+import React from "react";
 
-export const Message = () => {
+export const Message = ({ text, hour, sender = false }) => {
   return (
-    <div>Message</div>
-  )
-}
+    <li className={sender ? "sender" : "receiver"}>
+      <p>{text}</p>
+      <span>{hour}</span>
+    </li>
+  );
+};
