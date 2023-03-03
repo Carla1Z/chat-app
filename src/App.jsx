@@ -1,9 +1,15 @@
 import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Home } from "./components/Home";
+import { Chat } from "./components/Chat";
 
 export const App = () => {
   return (
-    <div>
-      <p>Hola mundo</p>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route exact path="/" element={<Home />} />
+        <Route exact path="/" element={<Chat />} />
+      </Routes>
+    </BrowserRouter>
   );
 };
