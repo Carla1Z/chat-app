@@ -8,7 +8,7 @@ export const App = () => {
     <BrowserRouter>
       <Routes>
         <Route exact path="/" element={<Home />} />
-        <Route exact path="/" element={<Chat />} />
+        <Route exact path="/chat/:id" element={<Chat />} />
       </Routes>
     </BrowserRouter>
   );
