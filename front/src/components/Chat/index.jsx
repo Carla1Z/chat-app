@@ -2,20 +2,16 @@ import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import { Message } from "../Message";
 import { GrSend } from "react-icons/gr";
+import { useChat } from "../../hooks/useChat";
 
 export const Chat = () => {
   const { id } = useParams();
-  const [messages, setMessages] = useState([]);
-
+  const { messages, sendMessage } = useChat(id);
   const handleSubmit = (event) => {
     event.preventDefault();
-    const value = event.target.myMessage.value;
-    const hour = `${new Date().getHours()}:${new Date().getMinutes()}`;
-    const sender = true;
-    console.log([...messages, { text: value, hour }]);
-    setMessages([...messages, { text: value, hour }]);
+    sendMessage(event.target.myMessage.value);
   };
-
+  console.log(messages);
   return (
     <div>
       <p>Chat with id {id}</p>

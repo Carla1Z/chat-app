@@ -5,7 +5,7 @@ const NEW_CHAT_MESSAGE = "newMessage";
 const SOCKET_SERVER = "http://localhost:3000";
 
 export const useChat = (chatId) => {
-  const [messages, setMessages] = useState();
+  const [messages, setMessages] = useState([]);
   const socketRef = useRef();
 
   useEffect(() => {
