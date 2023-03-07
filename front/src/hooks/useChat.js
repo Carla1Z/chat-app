@@ -28,7 +28,7 @@ export const useChat = (chatId) => {
 
   const sendMessage = (messageBody) => {
     socketRef.current.emit(NEW_CHAT_MESSAGE, {
-      body: messageBody,
+      text: messageBody,
       senderId: socketRef.current.id,
       hour: `${new Date().getHours()}:${new Date().getMinutes()}`,
     });
