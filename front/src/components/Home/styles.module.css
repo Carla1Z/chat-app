@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=Courgette&display=swap");
+
+.home {
+  background-image: url(https://images.unsplash.com/photo-1558325939-c3f590da2e2e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=896&q=80);
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+}
+
+.container {
+  background-color: #4158d0;
+  background-image: linear-gradient(
+    45deg,
+    #4158d0 0%,
+    #c850c0 46%,
+    #f35757 100%
+  );
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.5);
+  height: 80%;
+  width: 60%;
+  margin: auto;
+  border-radius: 25px;
+  display: inherit;
+}
+
+.info,
+.image {
+  width: 50%;
+  height: 100%;
+}
+
+.info {
+  padding: 1.5rem;
+  display: grid;
+  grid-template-rows: 50% 50%;
+}
+
+.info span{
+  padding: 3rem;
+}
+
+.title {
+  font-family: "Courgette", cursive;
+  font-size: 6rem;
+}
+
+.text{
+  margin-top: 3rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.input {
+  width: 90%;
+  padding: 1rem 2rem;
+  border: 2px solid midnightblue;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.input:focus {
+  box-shadow: 2px 2px 15px #c850c0 inset;
+  border: 2px solid midnightblue;
+}
+
+.btn {
+  border: none;
+  padding: 1rem 2.5rem;
+  background-color: midnightblue;
+  box-shadow: inset rgba(255, 255, 255, 0.418) 3px 3px 5px;
+  color: white;
+  border-radius: 50px;
+  transition: all 0.4s;
+}
+
+.btn:hover {
+  box-shadow: inset rgba(255, 255, 255, 0.473) 4px 4px 5px;
+}
+
+.image {
+  width: 50%;
+  border-radius: 0 25px 25px 0;
+  object-fit: cover;
+}
