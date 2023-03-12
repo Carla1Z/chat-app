@@ -3,6 +3,7 @@ import { Link, useParams } from "react-router-dom";
 import { Message } from "../Message";
 import { GrSend } from "react-icons/gr";
 import { useChat } from "../../hooks/useChat";
+import { AiOutlineDoubleLeft } from "react-icons/ai";
 import styles from "./styles.module.css";
 
 export const Chat = () => {
@@ -17,11 +18,20 @@ export const Chat = () => {
     <div className={styles.chat}>
       <div className={styles.container}>
         <span className={styles.user}>
-          <Link to="/">
-            <button className={styles.btn}>Volver</button>
+          <Link to="/" style={{textDecoration: "none"}}>
+            <button className={styles.btn}>
+              <AiOutlineDoubleLeft />
+              Volver
+            </button>
           </Link>
-          <p>Chat with id <b>{id}</b></p>
-          <img src="https://images.unsplash.com/photo-1618641986557-1ecd230959aa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80" alt="userPhoto" className={styles.userPhoto} />
+          <p>
+            Chat with id <b>{id}</b>
+          </p>
+          <img
+            src="https://images.unsplash.com/photo-1618641986557-1ecd230959aa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
+            alt="userPhoto"
+            className={styles.userPhoto}
+          />
         </span>
         <div className={styles.conversation}>
           <ol>
