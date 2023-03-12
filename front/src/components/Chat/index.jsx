@@ -41,13 +41,14 @@ export const Chat = () => {
               messages.map((message) => <Message {...message} />)
             )}
           </ol>
-          <form onSubmit={handleSubmit}>
+          <form onSubmit={handleSubmit} className={styles.form}>
             <input
               type="text"
               name="myMessage"
               placeholder="Write a message..."
+              className={styles.input}
             />
-            <button type="submit">
+            <button type="submit" className={styles.submit}>
               <GrSend />
             </button>
           </form>
